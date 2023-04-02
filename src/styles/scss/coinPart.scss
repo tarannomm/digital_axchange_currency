@@ -1,0 +1,36 @@
+@import "mixin";
+@import "variable"; 
+ 
+.container{
+    display:flex;
+    justify-content: space-between;
+    @include boxStyle(100%,55px,0);
+    border-bottom: 2px solid $color3; 
+    overflow: hidden;
+    margin: 3px auto;
+    padding:10px;
+ 
+}
+.rightContainer{
+    display: flex;
+    align-items: center;
+ 
+      img{
+        @include boxStyle(45px,45px,50%);
+    }
+    p{
+        padding-left:20px;
+        color: $color5;
+    }
+}
+.leftContainer{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   span{
+    @include textStyle(17px,$color4,normal);
+    width: 80px;
+   } 
+
+}

@@ -1,0 +1,10 @@
+@mixin boxStyle($with,$height,$radius){
+    width: $with;
+    height: $height;
+    border-radius: $radius;
+}
+@mixin textStyle($size,$color,$weight){
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+}
