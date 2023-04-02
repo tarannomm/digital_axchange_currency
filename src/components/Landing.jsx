@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { api } from '../services/Api';
 import Coin from './shared/coin';
 import "../styles/css/coins.css";
-import background from "../images/currency.jpg"
+import background from "../images/currency.jpg";
+import loader from "../images/loading.gif";
 const Landing = () => {
     const[search,setSarch]=useState("");
     const [data,setData]=useState([]);
@@ -27,7 +28,8 @@ const Landing = () => {
             <input type="search" value={search} onChange={searchHandler} placeholder="search what you want !"/>
             </div>
             <div className="bottomContainer">
-             {data.map(coin=><Coin key={coin.id} name={coin.name} symbol={coin.symbol} img={coin.image} price={coin.current_price} marketCap={coin.market_cap} priceChange={coin.price_change_percentage_24h} />)}
+             {data.length?data.map(coin=><Coin key={coin.id} name={coin.name} symbol={coin.symbol} img={coin.image} price={coin.current_price} marketCap={coin.market_cap} priceChange={coin.price_change_percentage_24h} />):<img src={loader} alt="loader"
+             />}
             </div>  </div>
         </div>
     );
