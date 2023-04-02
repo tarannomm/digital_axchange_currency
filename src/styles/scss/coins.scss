@@ -1,3 +1,37 @@
-.containerC{
-    margin: 0;
+@import "mixin";
+@import "variable";
+ .containerC{
+    position: relative;
+    #back{
+        @include boxStyle(100%,100vh,0);
+        position: fixed;
+    }
+    .container2{
+        position: absolute;
+        top: 0;
+        right: 0;
+ }
+ }
+ 
+.topContainer{
+    padding:15px;
+    color:$color5;
+    text-align: center;
+    input{
+        @include boxStyle(260px,40px,20px);
+        border: 2px solid $color6;
+        @include textStyle(17px,$color6,bold);
+        outline: none;
+        margin-top: 25px;
+        padding:5px 20px;
+        background-color: transparent;
+         &:focus{
+             box-shadow:0 0 2px 2px $color5
+         }
+    } 
+}
+.bottomContainer{
+    @include boxStyle(630px,500px,0);
+    border-top:4px solid $color4;  
+    margin:20px 50px
 }
