@@ -11,7 +11,7 @@ const Coin = (props) => {
            <div className="leftContainer">
             <span>{name}</span>
             <span>$ {price.toLocaleString()}</span>
-            <span> {priceChange}</span>
+            <span id={priceChange>0 ?"positive":"negative"}> {priceChange}</span>
             <span>${marketCap}</span>
            </div>  
         </div>
