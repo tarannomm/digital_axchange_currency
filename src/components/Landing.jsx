@@ -49,7 +49,8 @@ const Landing = () => {
             </div>
           </div>
           {data.length ? (
-            filterCoins.map((coin) => (
+            filterCoins.length?
+            (filterCoins.map((coin) => (
               <Coin
                 key={coin.id}
                 name={coin.name}
@@ -59,7 +60,7 @@ const Landing = () => {
                 marketCap={coin.market_cap}
                 priceChange={coin.price_change_percentage_24h}
               />
-            ))
+            ))):<h2 id="found">not found !!!</h2>
           ) : (
             <img src={loader} alt="loader" id="loader" />
           )}
