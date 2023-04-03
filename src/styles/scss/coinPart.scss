@@ -24,13 +24,13 @@
     }
 }
 .leftContainer{
-    width: 70%;
+    width: 75%;
     display: flex;
     align-items: center;
     justify-content: space-between;
    span{
-    @include textStyle(17px,$color4,normal);
-    width: 80px;
+    @include textStyle(15px,$color4,normal);
+    width: 90px;
    } 
 
 }

@@ -32,12 +32,37 @@
 }
 .bottomContainer{
     text-align: center;
-    @include boxStyle(630px,500px,0);
+    @include boxStyle(650px,500px,0);
     border-top:4px solid $color4;  
-    margin:20px 50px;
+    margin:20px 30px;
     #loader{
         @include boxStyle(70px,70px,0);
         margin:40px;
          
+    }
+    .spanContainer{
+        display: flex;
+        justify-content: space-between;
+        width: 650px;
+        border-bottom:  4px solid $color4;
+        color: $color5;
+        .left{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span{
+            width: 70px;
+          }
+        }
+        .right{
+            width:75%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+             span{
+                width: 90px;
+             }
+        }
+ 
     }
 }

@@ -36,6 +36,18 @@ const Landing = () => {
           />
         </div>
         <div className="bottomContainer">
+          <div className="spanContainer">
+            <div className="left">
+              <span>logo</span>
+              <span>symbol</span>
+            </div>
+            <div className="right">
+              <span>name</span>
+              <span>current-price</span>
+              <span>market-cap</span>
+              <span>peice-change-24h</span>
+            </div>
+          </div>
           {data.length ? (
             filterCoins.map((coin) => (
               <Coin
@@ -51,7 +63,7 @@ const Landing = () => {
           ) : (
             <img src={loader} alt="loader" id="loader" />
           )}
-        </div>{" "}
+        </div>
       </div>
     </div>
   );
