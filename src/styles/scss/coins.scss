@@ -35,7 +35,7 @@
     @include boxStyle(630px,500px,0);
     border-top:4px solid $color4;  
     margin:20px 50px;
-    img{
+    #loader{
         @include boxStyle(70px,70px,0);
         margin:40px;
          
